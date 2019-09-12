@@ -1,0 +1,23 @@
+<div>
+  <el-row v-for="(item,idx) in address" :key="idx" >
+    <el-col :span="8">{{item.label}}</el-col>
+    <el-col :span="16">{{item.text}}</el-col>
+  </el-row>
+  <div style="margin-top: 14px; overflow: auto; display: flex">
+    <el-link href="https://facebook.com/condrowiyono">
+      <el-button> Facebook </el-button>
+    </el-link>
+    <el-link href="https://twitter.com/_condroo">
+      <el-button> Twitter </el-button>
+    </el-link>
+    <el-link href="https://instagram.com/_condroo">
+      <el-button> Instagram </el-button>
+    </el-link>
+    <el-link href="mailto:condro@outlook.co.id">
+      <el-button> Mail </el-button>
+    </el-link>
+    <el-link href="https://www.linkedin.com/in/condro/">
+      <el-button> LinkedIn </el-button>
+    </el-link>
+  </div>
+</div>
