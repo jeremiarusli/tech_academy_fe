@@ -44,17 +44,39 @@ module.exports = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'http://192.168.40.94:9000'
   },
   /*
   ** Build configuration
   */
+  router: {
+    middleware: ['auth']
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: 'api/v1/auth/login', method: 'post', propertyName: 'data.token' },
+          user: false,
+          logout: false
+        }
+      }
+    },
+    redirect: {
+      login: '/',
+      logout: '/',
+      callback: '/',
+      home: '/in'
+    }
+  },
   build: {
     transpile: [/^element-ui/],
     /*

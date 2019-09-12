@@ -2,8 +2,8 @@ export default {
   name: 'TopMenu',
 
   methods: {
-    handleLogout () {
-      return 1
+    async handleLogout () {
+      await this.$auth.logout()
     }
   }
 }
