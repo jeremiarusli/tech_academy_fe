@@ -1,0 +1,45 @@
+<div>
+  <el-row class="tac">
+    <el-col :span="12">
+      <el-menu
+        default-active="0"
+        class="menu--vertical"
+        background-color="#02020b"
+        text-color="#ffffff"
+        router
+        active-text-color="#f69220"
+      >
+        <div
+          v-for="(item, index) in menu"
+          :key="index"
+        >
+          <el-submenu
+            v-if="item.submenu.length > 0"
+            :index="item.index"
+          >
+            <template slot="title">
+              <span>{{ item.name }}</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item
+                v-for="(sub, key) in item.submenu"
+                :route="sub.path"
+                :key="key"
+                :index="sub.index"
+              >
+                  {{ sub.name }}
+              </el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-menu-item
+            v-if="item.submenu.length === 0"
+            :route="item.path"
+            :index="item.index"
+          >
+              {{  item.name }}
+          </el-menu-item>
+        </div>
+      </el-menu>
+    </el-col>
+  </el-row>
+</div>
