@@ -1,0 +1,10 @@
+<div>
+  <h1 style="color:#409EFF;margin-top: 16px">{{title}}</h1>
+  <el-row v-for="(item,idx) in items" :key="idx" style="margin-bottom: 14px ">
+    <el-col :span="20" :xs="{ span: 24, offset: 0 }">
+      <div style="font-weight: 700"> {{item.title}} </div>
+      <div> {{item.subtitle}} </div>
+    </el-col>
+    <el-col :span="4" :xs="{ span: 24, offset: 0 }" style="color: #606266">{{item.time}}</el-col>
+  </el-row>
+</div>
