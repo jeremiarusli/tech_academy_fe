@@ -1,0 +1,18 @@
+.padding{
+  justify-content: left;
+  padding: 20px;
+  margin-left: 20px;
+}
+.design1{
+  border: solid 1px;
+  display: block;
+  border-color: black;
+}
+.font-p1{
+  font-size: 20px;
+}
+.font-p2{
+  font-size: 16px;
+  padding-top: 30px;
+  margin-left: 60px;
+}

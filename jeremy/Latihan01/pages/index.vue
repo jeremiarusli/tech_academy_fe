@@ -1,68 +1,75 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        Latihan01
-      </h1>
-      <h2 class="subtitle">
-        Latihan Nuxt.js
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="bg-color">
+    <el-row class="padding-top padding-bottom">
+      <el-col
+        :xs="{ span: 24, offset: 0 }"
+        :md="{ span: 16, offset: 4 }"
+        :lg="{ span: 16, offset: 4 }"
+        :xl="{ span: 16, offset: 4 }"
+      >
+        <el-row>
+          <el-col class="bg-color-left" :span="10">
+            <profile />
+            <contact />
+            <skills />
+            <language />
+          </el-col>
+          <el-col class="bg-color-right" :span="14">
+            <cv />
+            <exp />
+            <edu />
+            <personality />
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import profile from '~/components/profile'
+import contact from '~/components/contact'
+import skills from '~/components/skills'
+import language from '~/components/language'
+import cv from '~/components/cv'
+import exp from '~/components/exp'
+import edu from '~/components/edu'
+import personality from '~/components/personality'
 export default {
   components: {
-    Logo
+    profile,
+    contact,
+    skills,
+    language,
+    cv,
+    exp,
+    edu,
+    personality
   }
 }
 </script>
-
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
+.bg-color {
+  background-color: #4a4a4a;
+}
+.bg-color-left {
+  background-color: #e9f0f7;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  min-height: 1100px;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.bg-color-right {
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  min-height: 1100px;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.padding-top {
+  padding-top: 80px;
+  background-color: #4a4a4a;
 }
-
-.links {
-  padding-top: 15px;
+.padding-bottom {
+  padding-bottom: 80px;
+  background-color: #4a4a4a;
 }
 </style>

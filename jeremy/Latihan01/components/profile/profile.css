@@ -1,0 +1,20 @@
+.padding{
+  margin-top: 80px;
+  padding: 10px;
+  justify-content: left;
+}
+.padding-img{
+  display: block;
+  margin:20px auto;
+  justify-content: left;
+}
+.font-p1{
+  font-size: 26px;
+  padding-bottom: 20px;
+  margin-left: 55px;
+}
+.font-p2{
+  font-size: 16px;
+  margin-left: 55px;
+}
+
