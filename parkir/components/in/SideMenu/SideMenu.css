@@ -1,0 +1,10 @@
+.menu--vertical:not(.el-menu--collapse) {
+  width: 250px;
+  padding-top: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}

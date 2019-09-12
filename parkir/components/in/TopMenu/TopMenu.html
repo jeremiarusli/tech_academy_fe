@@ -1,0 +1,40 @@
+<div>
+  <el-menu
+    mode="horizontal"
+    class="menu--horizontal"
+    background-color="#02020b"
+    text-color="#ffffff"
+    active-text-color="#f69220"
+  >
+    <div class="flex justify-between">
+      <div class="text-left">
+        <el-menu-item index="1">
+          <img src="/type-bigparking-white.svg" width="140" class="pt-4" />
+        </el-menu-item>
+      </div>
+      <div class="text-right">
+        <el-menu-item
+          index="2"
+          class="inline-block"
+        >
+          <el-popover
+            placement="top"
+            trigger="hover"
+          >
+            <div>
+              <div
+                class="mt-4 mb-2 text-red cursor-pointer"
+                @click="handleLogout"
+              >
+                Logout
+              </div>
+            </div>
+            <div slot="reference">
+              <el-avatar :size="'medium'" icon="el-icon-user"></el-avatar>
+            </div>
+          </el-popover>
+        </el-menu-item>
+      </div>
+    </div>
+  </el-menu>
+</div>

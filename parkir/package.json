@@ -13,23 +13,24 @@
     "test": "ava"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
+    "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
-    "express": "^4.16.4",
     "element-ui": "^2.4.11",
-    "@nuxtjs/axios": "^5.3.6"
+    "express": "^4.16.4",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
+    "@nuxtjs/tailwindcss": "^1.1.2",
     "@vue/test-utils": "^1.0.0-beta.27",
     "ava": "^2.2.0",
+    "babel-eslint": "^10.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "browser-env": "^3.2.5",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "nodemon": "^1.18.9",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^1.0.0",
     "require-extension-hooks-vue": "^2.0.0"
