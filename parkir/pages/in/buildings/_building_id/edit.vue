@@ -35,7 +35,13 @@ export default {
       this.name = detail.name
     },
     save () {
-      return 1
+      const data = {
+        id: this.$route.params.building_id,
+        name: this.name
+      }
+      this.$store.dispatch('building/UPDATE_BUILDINGS', data).then(() => {
+        this.$router.push('/in/buildings')
+      })
     }
   }
 }

@@ -25,7 +25,7 @@
         label="Name"
       />
       <el-table-column
-        width="120"
+        width="200"
       >
         <template
           slot="header"
@@ -36,18 +36,19 @@
           slot-scope="scope"
           class="text-center"
         >
-          <el-dropdown>
-            <span class="el-dropdown-link">
-              Aksi<i class="el-icon-arrow-down el-icon--right" />
-            </span>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item @click="handleUpdate(scope.$index)">
-                Update
-              </el-dropdown-item>
-              <el-dropdown-item>Slots</el-dropdown-item>
-              <el-dropdown-item>Delete</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
+          <el-button
+            size="mini"
+            @click="handleUpdate(scope.$index, scope.row.id)"
+          >
+            Edit
+          </el-button>
+          <el-button
+            size="mini"
+            type="danger"
+            @click="handleDelete(scope.$index, scope.row.id)"
+          >
+            Delete
+          </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -68,8 +69,13 @@ export default {
     await this.$store.dispatch('building/FETCH_BUILDINGS')
   },
   methods: {
-    handleUpdate (id) {
-      alert(id)
+    handleUpdate (id, data) {
+      this.$router.push(`/in/buildings/${data}/edit`)
+    },
+
+    async handleDelete (id, data) {
+      await this.$store.dispatch('building/DELETE_BUILDINGS', { id: data })
+      await this.$store.dispatch('building/FETCH_BUILDINGS')
     }
   }
 }
