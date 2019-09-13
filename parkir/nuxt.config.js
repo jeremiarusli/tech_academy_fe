@@ -52,6 +52,7 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    proxy: true,
     baseURL: 'http://192.168.40.94:9000'
   },
   /*
@@ -59,6 +60,9 @@ module.exports = {
   */
   router: {
     middleware: ['auth']
+  },
+  proxy: {
+    '/api/': 'http://192.168.40.94:9000'
   },
   auth: {
     strategies: {
