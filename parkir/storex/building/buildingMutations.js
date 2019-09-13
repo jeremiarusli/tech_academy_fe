@@ -20,4 +20,6 @@ export default {
 
     event('storeX', types.FETCH_BUILDINGS_ERROR, types.FETCH_BUILDINGS)
   }
+
+  // [types.FETCH_SLOT_FROM_BUILDINGS] (state, id)
 }
