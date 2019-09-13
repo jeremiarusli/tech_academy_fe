@@ -1,7 +1,9 @@
 export default () => ({
   buildings: {
-    data: []
+    data: [],
+    total: 0
   },
   status: 'standby',
-  message: null
+  message: null,
+  building: {}
 })
