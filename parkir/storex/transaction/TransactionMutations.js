@@ -11,14 +11,10 @@ export default {
     state.transactions = {
       data
     }
-    event('storeX', types.FETCH_TRANSACTIONS_SUCCESS, types.FETCH_TRANSACTIONS)
   },
 
   [types.FETCH_TRANSACTIONS_ERROR] (state, message) {
     state.status = 'error'
     state.message = message
-
-    event('storeX', types.FETCH_TRANSACTIONS_ERROR, types.FETCH_TRANSACTIONS)
   }
-
 }
