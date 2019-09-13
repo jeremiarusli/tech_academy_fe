@@ -61,5 +61,20 @@ export default {
     } catch (err) {
       commit(types.UPDATE_BUILDINGS_ERROR, err)
     }
+  },
+
+  async [types.DELETE_BUILDINGS] ({ commit }, data = {}) {
+    commit(types.DELETE_BUILDINGS)
+
+    try {
+      const response = await this.$axios.delete(`/api/v1/buildings/${data.id}`)
+      if (response.status === 200) {
+        commit(types.DELETE_BUILDINGS_SUCCESS)
+      } else {
+        commit(types.DELETE_BUILDINGS_ERROR, response.data.status)
+      }
+    } catch (err) {
+      commit(types.UPDATE_BUILDINGS_ERROR, err)
+    }
   }
 }

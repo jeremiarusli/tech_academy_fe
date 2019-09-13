@@ -65,5 +65,20 @@ export default {
   [types.UPDATE_BUILDINGS_ERROR] (state, message) {
     state.status = 'error'
     state.message = message
+  },
+
+  [types.DELETE_BUILDINGS] (state) {
+    state.status = 'deleting'
+    state.message = null
+  },
+
+  [types.DELETE_BUILDINGS_SUCCESS] (state) {
+    state.status = 'deleted'
+    state.message = 'successfully deleted'
+  },
+
+  [types.DELETE_BUILDINGS_ERROR] (state, message) {
+    state.status = 'error'
+    state.message = message
   }
 }
