@@ -64,10 +64,11 @@ module.exports = {
     strategies: {
       local: {
         endpoints: {
-          login: { url: 'api/v1/auth/login', method: 'post', propertyName: 'data.token' },
+          login: { url: 'api/v1/auth/login', method: 'post', propertyName: 'token' },
           user: false,
           logout: false
-        }
+        },
+        tokenType: false
       }
     },
     redirect: {
